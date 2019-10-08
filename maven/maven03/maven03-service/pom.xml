@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <!-- 指定了p当前om的版本 -->
+  <modelVersion>4.0.0</modelVersion>
+
+  <!-- 项目标识（公司反写+项目名） -->
+  <groupId>com.imooc.maven03</groupId>
+  <!-- 模块标识（项目名+模块名） -->
+  <artifactId>maven03-service</artifactId>
+  <!-- 打包方式 
+		jar默认
+		war
+		zip
+		pom
+		-->
+  <packaging>war</packaging>
+  <!-- 项目版本号
+		第一个数字表示大版本号
+		第2个数字表示分支版本号
+		第3个数字表示小版本号
+		SNAPSHOT表示快照
+		alpha 内部测试
+		beta 公测
+		Release 稳定
+		GA 正式发布
+   -->
+  <version>1.0-SNAPSHOT</version>
+  <!-- 项目描述名 -->
+  <name>maven03-service Maven Webapp</name>
+  <!-- 项目地址 -->
+  <url>http://maven.apache.org</url>
+  <!-- 项目描述 -->
+  <description></description>
+
+<!-- 依赖列表 -->
+  <dependencies>
+  	<!-- 依赖项 -->
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <!-- 依赖范围 -->
+      <scope>test</scope>
+      <!-- 设置依赖是否可选(false/true) -->
+      <optional>false</optional>
+      <!-- 排除依赖传递列表 -->
+      <exclusions>
+      	<exclusion></exclusion>
+      </exclusions>
+    </dependency>
+  </dependencies>
+
+  <!-- 依赖管理,主要用于父模块于子模块 -->
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency></dependency>
+  	</dependencies>
+  </dependencyManagement>
+
+  <build>
+    <finalName>maven03-service</finalName>
+    <!-- 插件列表 -->
+    <plugins>
+    	<plugin>
+    		<groupId>junit</groupId>
+      		<artifactId>junit</artifactId>
+       		<version>3.8.1</version>
+    	</plugin>
+    </plugins>
+  </build>
+  <!-- 用于子模块对父模块pom的继承 -->
+  <parent></parent>
+  <!-- 聚合多个maven项目 -->
+  <modules>
+  	<module></module>
+  </modules>
+</project>
